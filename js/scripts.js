@@ -15,7 +15,9 @@ var repository = [
 
 for (i = 0; i < repository.length; i++) {
   if (repository[i].height  >= 0.5) {
-    document.write(repository[i].name + ': (height: ' + repository[i].height + ') ' + 'wow! that\'s big ' + '<br/>');
+    document.write('<p>' + repository[i].name);
+    document.write(': (height ' + repository[i].height + ') </p>');
   } else {
-    document.write(repository[i].name + ': (height: ' + repository[i].height + ') ' + '<br/>');}
+    document.write('<p>' + repository[i].name);
+    document.write(': (height ' + repository[i].height + ') </p>');}
 }
