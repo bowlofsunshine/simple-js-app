@@ -5,7 +5,7 @@ var repository = [
   { name: 'Weedle',
   height: 0.3,
   types: ['bug', 'poison'] },
-  { name: 'Squirtel',
+  { name: 'Squirtle',
   height: 0.5,
   types: ['water'] },
   { name: 'Pidgey',
@@ -33,7 +33,11 @@ var repository = [
 // }
 // repository.forEach(arrayList);
 
-function arrayList(pokedex) {
-  document.write(pokedex.name + ' height: ' + pokedex.height + '<br>');
-}
-repository.forEach(arrayList);
+// function arrayList(pokedex) {
+//   document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
+// }
+// repository.forEach(arrayList);
+
+repository.forEach(function(pokedex){
+  document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
+});
