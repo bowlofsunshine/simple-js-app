@@ -1,4 +1,5 @@
-var repository = [
+var pokemonRepository = (function functionName() {
+  var repository = [
   { name: 'Bulbasaur',
   height: 0.7,
   types: ['grass', 'poison'] } ,
@@ -12,6 +13,17 @@ var repository = [
   height: 0.3,
   types: ['flying', 'normal'] }
 ];
+  function add(pokemon) {
+    repository.push(pokemon);
+  }
+  function getAll() {
+    return repository;
+  }
+  return {
+    add: add,
+    getAll: getAll;
+  };
+})();
 
 // function printArrayDetails() {
 //   for (i = 0; i < repository.length; i++) {
