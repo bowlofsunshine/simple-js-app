@@ -1,4 +1,4 @@
-var pokemonRepository = (function functionName() {
+var pokemonRepository = (function() {
   var repository = [
   { name: 'Bulbasaur',
   height: 0.7,
@@ -21,35 +21,10 @@ var pokemonRepository = (function functionName() {
   }
   return {
     add: add,
-    getAll: getAll;
+    getAll: getAll
   };
 })();
 
-// function printArrayDetails() {
-//   for (i = 0; i < repository.length; i++) {
-//     if (repository[i].height  >= 0.5) {
-//       document.write('<p>' + repository[i].name);
-//       document.write(': (height ' + repository[i].height + ') wow, that\'s big! </p>');
-//     } else {
-//       document.write('<p>' + repository[i].name);
-//       document.write(': (height ' + repository[i].height + ') </p>');}
-//   }
-// }
-
-// function arrayList(pokedex) {
-//   if (pokedex.height >= 0.5)
-//   document.write(pokedex.name + ' height: ' + pokedex.height + 'wow, that\'s big! <br>');
-//   else {
-//     document.write(pokedex.name + ' height: ' + pokedex.height + '<br>');
-//   }
-// }
-// repository.forEach(arrayList);
-
-// function arrayList(pokedex) {
-//   document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
-// }
-// repository.forEach(arrayList);
-
-repository.forEach(function(pokedex){
+pokemonRepository.getAll().forEach(function(pokedex){
   document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
 });
