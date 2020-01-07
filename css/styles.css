@@ -3,3 +3,11 @@ body {
   line-height: 2em;
   margin: 10px;
 }
+
+.button-class {
+  background-color: red;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
