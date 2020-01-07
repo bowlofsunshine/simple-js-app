@@ -25,6 +25,19 @@ var pokemonRepository = (function() {
   };
 })();
 
+var pokemonList = document.querySelector('.pokemon-list')
+
 pokemonRepository.getAll().forEach(function(pokedex){
-  document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
+  var listItem = document.createElement('li')
+  var button = document.createElement('button')
+
+  button.innerText = pokedex.name;
+  // pokemonList.classList.contains('pokemon-list')
+  button.classList.add('button-class');
+  listItem.appendChild(button);
+  pokemonList.appendChild(listItem);
+
 });
+
+
+// document.write('name: ' + pokedex.name + ' height: ' + pokedex.height + ' types: ' + pokedex.types + '<br>');
