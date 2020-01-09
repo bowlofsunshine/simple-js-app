@@ -23,6 +23,10 @@ var pokemonRepository = (function() {
     pokemonList.appendChild(listItem);
   }
 
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
+
     function add(pokemon) {
       repository.push(pokemon);
     }
