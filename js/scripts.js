@@ -1,27 +1,28 @@
 var pokemonRepository = (function() {
   var repository = [];
   var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-
   //Function to add Pokemon data
-   function add(pokemon) {
-     repository.push(pokemon);
-   }
+  function add(pokemon) {
+    repository.push(pokemon);
+  }
 
   function addListItem(pokemon) {
     var listItem = document.createElement('li')
     var button = document.createElement('button')
-
+    //setting the innerText of the button to be the Pokémon's name
     button.innerText = pokemon.name;
+    //Add a class to the button using the classList.add making it easier to target in CSS
     button.classList.add('button-class');
-
+    //append the button to the list item as its child.
     listItem.appendChild(button);
+    //append the list item to the unordered list as its child
     pokemonList.appendChild(listItem);
     button.addEventListener('click', function(){
       showDetails(pokemon)
     })
   }
 
-//Add a loadList function as a return key that uses fetch to GET the complete list of Pokémon
+  //Add a loadList function as a return key that uses fetch to GET the complete list of Pokémon
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -39,6 +40,7 @@ var pokemonRepository = (function() {
       console.error(e);
     })
   }
+
   //Add a loadDetails()
   //loadDetails() function should expect a parameter with a Pokémon object as a parameter.
   function loadDetails(item) {
@@ -57,9 +59,11 @@ var pokemonRepository = (function() {
       console.error(e);
     });
   }
+
   function getAll() {
     return repository;
   }
+
   //Make sure both functions loadList and loadDetails are assigned to keys with the same name
   //in the returned object of your pokemonRepository.
   return {
@@ -70,13 +74,13 @@ var pokemonRepository = (function() {
     loadList: loadList,
     loadDetails: loadDetails
   };
-} ) ();
+})();
 
 //Inside the showDetails() function, call the loadDetails() function from above.
 function showDetails(item) {
-pokemonRepository.loadDetails(item).then(function () {
-  //Log the result in the console
-  console.log(item);
+  pokemonRepository.loadDetails(item).then(function () {
+    //Log the result in the console
+    console.log(item);
   });
 }
 
