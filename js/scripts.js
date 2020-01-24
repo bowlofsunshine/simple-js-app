@@ -156,6 +156,7 @@ var pokemonRepository = (function() {
     // search: search,
     addListItem: addListItem,
     loadList: loadList,
+    showDetails: showDetails,
     loadDetails: loadDetails,
     showModal: showModal,
     hideModal: hideModal
