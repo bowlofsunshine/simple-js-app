@@ -8,11 +8,28 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand" href="#">My Pokedex</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://bowlofsunshine.github.io/simple-js-app/">OG Javascript <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://bowlofsunshine.github.io/pokemon-jquery/">Jquery Bootstrap <span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- <button id='show-modal'></button> -->
   <div id='modal-container'></div>
 
     <ul class="pokemon-list"></ul>
+
   <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
   <script src="js/scripts.js"></script>
